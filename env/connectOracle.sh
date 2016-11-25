@@ -1,0 +1,1 @@
+docker run -e URL=MYUSER/MYUSER@//10.226.159.216:1521/xe.oracle.docker -ti sflyr/sqlplus

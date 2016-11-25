@@ -1,0 +1,20 @@
+version: '2'
+services:
+    oracle12c:
+        image: sath89/oracle-12c
+        ports: 
+            - "8080:8080"
+            - "1521:1521"
+        volumes: 
+            - /u01/app/oracle
+    solr:
+        build:
+            context: ./image-solr
+        ports:
+            - "8983:8983"
+        volumes:
+            - /opt/solr/server/solr/mycores
+        entrypoint:
+            - docker-entrypoint.sh
+            - solr-precreate
+            - mycore

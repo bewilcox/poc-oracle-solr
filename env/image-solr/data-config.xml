@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataConfig>
+    <dataSource name="jdbc" driver="oracle.jdbc.OracleDriver" url="jdbc:oracle:thin:@10.226.159.216:1521/xe.oracle.docker" user="MYUSER" password="MYUSER"/>
+        <document>
+            <entity name="mydoc" query="select * from DOCUMENT">
+                <field column="ID" name="id" />
+                <field column="METAS" name="metas" />
+            </entity>
+        </document>
+</dataConfig>
